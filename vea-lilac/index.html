@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naya & Amin | @flexation.id</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="icon" href="./assets/icons/flexation-pink.png" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-straight/css/uicons-bold-straight.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+
+    <!-- SEO Tag -->
+    <!-- Deskripsi (Meta Description) -->
+    <meta name="description"
+        content="Flexation.id menyediakan layanan undangan nikahan digital yang elegan, mudah diakses, dan dapat disesuaikan. Pesan sekarang untuk hari spesial Anda.">
+
+    <!-- Keywords (Kata Kunci) -->
+    <meta name="keywords"
+        content="undangan nikahan digital, undangan pernikahan online, desain undangan nikah, undangan nikah digital, undangan nikah customizable, undangan nikah fleksibel">
+
+    <!-- Open Graph Meta Tags (untuk Facebook, LinkedIn, dll) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Undangan Nikahan Digital | Flexation.id">
+    <meta property="og:description"
+        content="Pesan undangan nikahan digital dengan desain elegan dan dapat disesuaikan di Flexation.id. Mudah diakses dan siap untuk hari spesial Anda.">
+    <meta property="og:image" content="https://www.flexation.id/assets/images/undangan-nikahan.jpg">
+    <!-- Ganti dengan gambar undangan nikahan yang relevan -->
+    <meta property="og:url" content="https://www.flexation.id/undangan-nikahan-digital">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Undangan Nikahan Digital | Flexation.id">
+    <meta name="twitter:description"
+        content="Pesan undangan nikahan digital yang elegan dan mudah diakses di Flexation.id. Sesuaikan dengan tema pernikahan Anda!">
+    <meta name="twitter:image" content="https://www.flexation.id/assets/images/undangan-nikahan.jpg">
+    <!-- Ganti dengan gambar undangan nikahan yang relevan -->
+    <meta name="twitter:site" content="@flexation_id">
+</head>
+
+<body class="relative bg-background200 text-white text-center lg:grid lg:grid-cols-3 lg:min-h-screen no-scrollbar">
+    <main class="relative">
+        <!-- cover undangan  -->
+        <div id="cover-modal"
+            class="absolute inset z-50 w-full flex flex-col py-24 md:py-10 items-center justify-between min-h-screen max-h-screen bg-background100">
+            <div class="flex flex-col space-y-5 ">
+                <div class="font-medium text-xl">THE WEDDING OF</div>
+                <div data-aos="fade-up" class="bg-white rounded-full w-52 h-52 cursor-pointer object-cover">
+                    <img src="./assets/images/cover.JPEG" alt="Flexation | Naya & Amin"
+                        class="w-52 h-52 rounded-full object-cover" onclick="imgModal.openModal(this)" />
+                </div>
+                <div class="text-text100 font-tangerine font-bold text-5xl">
+                    Naya & Amin
+                </div>
+                <div class="uppercase text-sm">MINGGU, 27 APRIL 2025</div>
+            </div>
+
+            <div class="space-y-3 rounded-md bg-white bg-opacity-70 p-4 w-[70%] text-background400">
+                <div class="text-sm">Kepada Yth</div>
+                <div class="font-semibold" id="nama-tamu">Nama Tamu</div>
+                <button onclick="closeCover()"
+                    class="text-xs border bg-background50 p-2 px-5 rounded-xl hover:bg-background200 hover:text-white">
+                    <div class="flex items-center justify-center space-x-2">
+                        <i class="fi fi-rr-envelope"></i>
+                        <span>Buka Undangan</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- konten undangan utama  -->
+        <div id="main-content" class="relative z-10 hidden no-scrollbar">
+            <!-- music & menu bar  -->
+            <div>
+                <div class="fixed z-50 bottom-4 start-4">
+                    <div id="rotateButton"
+                        class="spin px-2 pt-2 text-center cursor-pointer bg-gradient-to-b bg-background50 from-background50 to-background100 rounded-full">
+                        <i class="fi fi-rs-record-vinyl text-2xl text-white"></i>
+                    </div>
+                </div>
+                <audio autoplay loop id="audio" src="./assets/music/payung-teduh.mp3" type="audio/mpeg"></audio>
+            </div>
+
+            <!-- header  -->
+            <div class="flex flex-col space-y-10 py-10 pb-0 items-center min-h-screen bg-background100">
+                <div class="font-medium text-xl">THE WEDDING OF</div>
+                <div data-aos="fade-up" class="bg-white rounded-full w-52 h-52 cursor-pointer object-cover">
+                    <img src="./assets/images/cover.JPEG" alt="Flexation | Naya & Amin"
+                        class="w-52 h-52 rounded-full object-cover" onclick="imgModal.openModal(this)" />
+                </div>
+                <div class="text-text100 font-tangerine font-bold text-5xl">
+                    Naya & Amin
+                </div>
+                <div class="uppercase">MINGGU, 27 APRIL 2025</div>
+                <div data-aos="fade-up" data-aos-duration="3000" class="space-y-5">
+                    <div class="flex font-paprika justify-center gap-4 text-[10px]">
+                        <div class="flex flex-col items-center">
+                            <h1 id="days" class="text-2xl font-roboto italic"></h1>
+                            <p>Hari</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <h1 id="hours" class="text-2xl font-roboto italic"></h1>
+                            <p>Jam</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <h1 id="minutes" class="text-2xl font-roboto italic"></h1>
+                            <p>Menit</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <h1 id="seconds" class="text-2xl font-roboto italic"></h1>
+                            <p>Detik</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <button id="save-to-calender"
+                            class="font-medium text-xs flex items-center justify-center gap-3 bg-background300 text-white py-2 px-3 rounded-md hover:bg-white hover:text-background300">
+                            <i class="fi fi-rs-calendar"></i>
+                            <span>Save to Calender</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="px-0 relative pb-0 w-full h-[50%]">
+                    <svg id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
+                        class="transition duration-300 ease-in-out delay-150 w-full h-auto">
+                        <defs>
+                            <linearGradient id="gradient" x1="50%" y1="100%" x2="50%" y2="0%">
+                                <!-- <stop offset="5%" stop-color="#2a2a2a"></stop>
+                                <stop offset="95%" stop-color="#363636"></stop> -->
+                                <stop offset="5%" stop-color="#4A3D4A"></stop>
+                                <stop offset="95%" stop-color="#6A4F6A"></stop>
+                            </linearGradient>
+                        </defs>
+                        <path
+                            d="M 0,400 L 0,100 C 52.23893032701322,81.97740704890964 104.47786065402644,63.95481409781928 141,58 C 177.52213934597356,52.04518590218072 198.3274877109074,58.15815065763252 233,58 C 267.6725122890926,57.84184934236748 316.21218850234396,51.41258327165063 354,70 C 391.78781149765604,88.58741672834937 418.82375827971686,132.19151625576495 457,129 C 495.17624172028314,125.80848374423505 544.4927783787887,75.82135170528953 587,61 C 629.5072216212113,46.17864829471047 665.2051282051282,66.52307692307693 714,92 C 762.7948717948718,117.47692307692307 824.6867088006984,148.08634060240277 862,142 C 899.3132911993016,135.91365939759723 912.048036592078,93.13156066731196 944,80 C 975.951963407922,66.86843933268804 1027.1211448309896,83.38741672834936 1076,99 C 1124.8788551690104,114.61258327165064 1171.4673840839644,129.31877241929055 1211,125 C 1250.5326159160356,120.68122758070945 1283.009318833153,97.33749359448841 1320,90 C 1356.990681166847,82.66250640551159 1398.4953405834235,91.33125320275579 1440,100 L 1440,400 L 0,400 Z"
+                            stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.53"
+                            class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+                        <path
+                            d="M 0,400 L 0,233 C 48.64357266222552,213.26636964072196 97.28714532445105,193.53273928144395 135,192 C 172.71285467554895,190.46726071855605 199.49499136442142,207.1354125149462 232,216 C 264.5050086355786,224.8645874850538 302.73288921786326,225.9256106587713 339,220 C 375.26711078213674,214.0743893412287 409.5734517641253,201.16214484996868 457,205 C 504.4265482358747,208.83785515003132 564.9733037256353,229.425809941354 608,226 C 651.0266962743647,222.574190058646 676.5333333333334,195.13461538461542 709,186 C 741.4666666666666,176.86538461538458 780.8933629410315,186.03572852018448 826,212 C 871.1066370589685,237.96427147981552 921.8932149025411,280.72247053464673 962,271 C 1002.1067850974589,261.27752946535327 1031.5337774488037,199.0743893412287 1069,194 C 1106.4662225511963,188.9256106587713 1151.9716753022449,240.97997210043843 1190,246 C 1228.0283246977551,251.02002789956157 1258.5795213422157,209.0057222570176 1299,199 C 1339.4204786577843,188.9942777429824 1389.7102393288922,210.9971388714912 1440,233 L 1440,400 L 0,400 Z"
+                            stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1"
+                            class="transition-all duration-300 ease-in-out delay-150 path-1"></path>
+                    </svg>
+                    <div class="bg-background400 p-5 pb-8 text-xs">
+                        <div data-aos="fade-up" class="space-y-2">
+                            <div>
+                                Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
+                                untukmu isteri-isteri dari jenismu sendiri, supaya kamu
+                                cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya
+                                diantaramu rasa kasih dan sayang. Sesungguhnya pada yang
+                                demikian itu benar-benar terdapat tanda-tanda bagi kaum yang
+                                berpikir.
+                            </div>
+                            <div>(Q.S Ar-Rum : 21)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- calon pengantin  -->
+            <div class="min-h-screen bg-background200 p-5 md:px-8 py-10 space-y-8">
+                <div data-aos="fade-up" class="space-y-2">
+                    <div class="font-qwitcher text-4xl">Assalamualaikum Wr. Wb.</div>
+                    <div class="text-sm">
+                        Dengan memohon Rahmat dan Ridho Allah SWT, Kami bermaksud mengundang
+                        Bapak/Ibu/Saudara/i untuk hadir dalam pernikahan putra/putri kami
+                    </div>
+                </div>
+                <div class="space-y-5">
+                    <!-- pengantin perempuan -->
+                    <div class="flex flex-col items-center text-sm">
+                        <div data-aos="fade-up" class="bg-white w-44 h-60 rounded-full cursor-pointer object-cover">
+                            <img src="./assets/images/mempelai-wanita.JPEG" alt="Flexation | Naya & Amin"
+                                class="w-44 h-60 max-h-full rounded-full object-cover"
+                                onclick="imgModal.openModal(this)" />
+                        </div>
+                        <div data-aos="fade-up" class="font-berkshire text-4xl py-2">
+                            Nadia Damayanti
+                        </div>
+                        <div data-aos="fade-up">
+                            <div>Putri dari</div>
+                            <div>Bapak Sarip Hidayat dan Ibu Rita Supriatin</div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" class="font-lobster text-5xl text-background50">
+                        &
+                    </div>
+                    <!-- pengantin laki-laki -->
+                    <div class="flex flex-col items-center text-sm">
+                        <div data-aos="fade-up" class="bg-white w-44 h-60 rounded-full cursor-pointer object-cover">
+                            <img src="./assets/images/mempelai-pria.JPEG" alt="Flexation | Naya & Amin"
+                                class="w-44 h-60 max-h-full rounded-full object-cover"
+                                onclick="imgModal.openModal(this)" />
+                        </div>
+                        <div data-aos="fade-up" class="font-berkshire text-4xl py-2">
+                            Muhamad Amin
+                        </div>
+                        <div data-aos="fade-up">
+                            <div>Putra dari</div>
+                            <div>Bapak Muhamad Ali dan Ibu Anni</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- acara pernikahan -->
+            <div>
+                <div class="bg-background400 h-16"></div>
+                <div class="bg-background500 p-5 md:px-8 py-16 space-y-4">
+                    <div data-aos="fade-up" class="font-tangerine text-5xl font-medium">
+                        Save The Date
+                    </div>
+                    <!-- akad nikah -->
+                    <div class="space-y-3">
+                        <div data-aos="fade-up class=" text-2xl">|</div>
+                        <div data-aos="fade-up">
+                            <i class="fi fi-rr-rings-wedding text-6xl"></i>
+                        </div>
+                        <div class="font-quicksand">
+                            <div data-aos="fade-up" class="font-bodoni text-2xl">
+                                Akad Nikah
+                            </div>
+                            <div data-aos="fade-up">Minggu, 27 April 2025</div>
+                            <div data-aos="fade-up">Pukul 10.00 WIB</div>
+                        </div>
+                        <div data-aos="fade-up">
+                            <i class="fi fi-bs-house-chimney text-xl"></i>
+                        </div>
+                        <div class="font-quicksand text-sm space-y-3">
+                            <div data-aos="fade-up">
+                                Jl. Binamarga, Ds. Sanja RT 01 RW 05 <br />
+                                Kecamatan Citeureup, Kabupaten Bogor
+                            </div>
+                            <div data-aos="fade-up">
+                                <a href="https://maps.app.goo.gl/6gikERWdG7GU9YNMA?g_st=aw" target="_blank">
+                                    <button class="bg-background50 text-xs p-2 px-3 rounded-full">
+                                        <i class="fi fi-rs-map-marker"></i> Google Maps Lokasi
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- resepsi  -->
+                    <div class="space-y-3">
+                        <div data-aos="fade-up class=" text-2xl">|</div>
+                        <div data-aos="fade-up">
+                            <i class="fi fi-rr-rings-wedding text-6xl"></i>
+                        </div>
+                        <div class="font-quicksand">
+                            <div data-aos="fade-up" class="font-bodoni text-2xl">
+                                Resepsi
+                            </div>
+                            <div data-aos="fade-up">Minggu, 27 April 2025</div>
+                            <div data-aos="fade-up">Pukul 12.00 WIB s.d Selesai</div>
+                        </div>
+                        <div data-aos="fade-up">
+                            <i class="fi fi-bs-house-chimney text-xl"></i>
+                        </div>
+                        <div class="font-quicksand text-sm space-y-3">
+                            <div data-aos="fade-up">
+                                Jl. Binamarga, Ds. Sanja RT 01 RW 05 <br />
+                                Kecamatan Citeureup, Kabupaten Bogor
+                            </div>
+                            <div data-aos="fade-up">
+                                <a href="https://maps.app.goo.gl/6gikERWdG7GU9YNMA?g_st=aw" target="_blank">
+                                    <button class="bg-background50 text-xs p-2 px-3 rounded-full">
+                                        <i class="fi fi-rs-map-marker"></i> Google Maps Lokasi
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-background400 h-16"></div>
+            </div>
+
+            <!-- perjalanan cinta  -->
+            <div class="bg-background100 p-5 md:px-8 py-12 space-y-8">
+                <div data-aos="fade-up" class="font-tangerine font-bold text-5xl">Our Story</div>
+                <div class="text-start text-xs px-6 space-y-3">
+                    <div data-aos="fade-up" class="p-4 border border-white rounded-md border-2 bg-background150 shadow">
+                        <div class="font-hanuman font-bold text-base">Awal Kenal</div>
+                        <div class="font-workSans">
+                            Pada awal tahun 2018, kami berkenalan di media sosial pada saat masih
+                            duduk di bangku SMK.
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" class="p-4 border border-white rounded-md border-2 bg-background150 shadow">
+                        <div class="font-hanuman font-bold text-base">Tunangan</div>
+                        <div class="font-workSans">
+                            Pada bulan Mei tahun 2024 Tepat di tahun ke 6 kami memutuskan untuk tunangan dan saling
+                            berjanji
+                            untuk menjaga hubungan sampai waktu pernikahan tiba.
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" class="p-4 border border-white rounded-md border-2 bg-background150 shadow">
+                        <div class="font-hanuman font-bold text-base">Pernikahan</div>
+                        <div class="font-workSans">
+                            Tepat pada 27 April 2025 ini kami siap melanjutkan ke jenjang yang lebih serius dengan
+                            melewati
+                            ujian dan segala hal rintangan yang tidak mudah.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- gallery foto  -->
+            <div class="bg-background400 min-h-screen p-5 md:px-8 py-12 space-y-8">
+                <div data-aos="zoom-in" class="font-tangerine font-bold text-5xl">Gallery</div>
+                <div class="grid grid-cols-2 gap-2" data-aos="fade-up" data-aos-duration="3000">
+                    <div class="flex flex-col gap-2">
+                        <div data-aos="fade-up" data-aos-duration="3000" class="rounded-xl cursor-pointer object-cover">
+                            <img src="./assets/images/prewed (1).JPEG" alt="Flexation | Naya & Amin"
+                                class="h-auto w-full max-w-full object-cover" onclick="imgModal.openModal(this)" />
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="3000" class="rounded-xl cursor-pointer object-cover">
+                            <img src="./assets/images/prewed (11).JPEG" alt="Flexation | Naya & Amin"
+                                class="h-auto w-full max-w-full object-cover" onclick="imgModal.openModal(this)" />
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="3000" class="rounded-xl cursor-pointer object-cover">
+                            <img src="./assets/images/prewed (8).JPEG" alt="Flexation | Naya & Amin"
+                                class="h-auto w-full max-w-full object-cover" onclick="imgModal.openModal(this)" />
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="3000" class="rounded-xl cursor-pointer object-cover">
+                            <img src="./assets/images/prewed (4).JPEG" alt="Flexation | Naya & Amin"
+                                class="h-auto w-full max-w-full object-cover" onclick="imgModal.openModal(this)" />
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="3000" class="rounded-xl cursor-pointer object-cover">
+                            <img src="./assets/images/prewed (5).JPEG" alt="Flexation | Naya & Amin"
+                                class="h-auto w-full max-w-full object-cover" onclick="imgModal.openModal(this)" />
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <div data-aos="fade-up" data-aos-duration="3000" class="rounded-xl cursor-pointer object-cover">
+                            <img src="./assets/images/prewed (10).JPEG" alt="Flexation | Naya & Amin"
+                                class="h-auto w-full max-w-full object-cover" onclick="imgModal.openModal(this)" />
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="3000" class="rounded-xl cursor-pointer object-cover">
+                            <img src="./assets/images/prewed (2).JPEG" alt="Flexation | Naya & Amin"
+                                class="h-auto w-full max-w-full object-cover" onclick="imgModal.openModal(this)" />
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="3000" class="rounded-xl cursor-pointer object-cover">
+                            <img src="./assets/images/prewed (7).JPEG" alt="Flexation | Naya & Amin"
+                                class="h-auto w-full max-w-full object-cover" onclick="imgModal.openModal(this)" />
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="3000" class="rounded-xl cursor-pointer object-cover">
+                            <img src="./assets/images/prewed (3).JPEG" alt="Flexation | Naya & Amin"
+                                class="h-auto w-full max-w-full object-cover" onclick="imgModal.openModal(this)" />
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="3000" class="rounded-xl cursor-pointer object-cover">
+                            <img src="./assets/images/prewed (9).JPEG" alt="Flexation | Naya & Amin"
+                                class="h-auto w-full max-w-full object-cover" onclick="imgModal.openModal(this)" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- dompet digital  -->
+            <div class="bg-background200 p-5 md:px-8 py-12 space-y-8">
+                <div class="space-y-3">
+                    <div data-aos="zoom-in" class="font-tangerine font-bold text-5xl">Wedding Gift</div>
+                    <div data-aos="fade-up" class="text-xs">
+                        Doa Restu Anda merupakan karunia yang sangat berarti bagi kami. Dan jika memberi sebagai
+                        ungkapan tanda kasih, Anda dapat memberi kado secara cashless.
+                    </div>
+                </div>
+                <div class="space-y-3 text-primary">
+                    <!-- rekening 1  -->
+                    <div class="bg-white p-4 space-y-2 md:p-6 md:px-19 rounded-lg text-left text-colortext"
+                        data-aos="fade-up" data-aos-duration="3000">
+                        <div class="flex justify-between items-between">
+                            <img src="./assets/icons/chip-bank.png" class="w-16 mb-3" />
+                            <img src="./assets/icons/logo-bca.png" class="h-20" />
+                        </div>
+                        <div class="text-sm text-background300 font-semibold font-sono">
+                            An. Nadia
+                        </div>
+                        <div class="text-sm text-background300 font-sono" id="accountNumber">
+                            5721174493
+                        </div>
+                        <button id="copyAccountButton" onclick="copyToClipboard(this)"
+                            data-original-text="Salin No. Rekening"
+                            class="bg-gray-500 hover:bg-gray-600 text-white p-2 rounded-lg text-xs mt-3 copy-button">
+                            <i class="fi fi-ss-copy-alt"></i>
+                            Salin No. Rekening
+                        </button>
+                    </div>
+                    <!-- rekening 2  -->
+                    <div class="bg-white p-4 space-y-2 md:p-6 md:px-19 rounded-lg text-left text-colortext"
+                        data-aos="fade-up" data-aos-duration="3000">
+                        <div class="flex justify-between items-between">
+                            <img src="./assets/icons/chip-bank.png" class="w-16 mb-3" />
+                            <img src="./assets/icons/logo-bni.png" class="h-8" />
+                        </div>
+                        <div class="text-sm text-background300 font-semibold font-sono">
+                            An. Muhamad Amin
+                        </div>
+                        <div class="text-sm text-background300 font-sono" id="accountNumber">
+                            1798820529
+                        </div>
+                        <button id="copyAccountButton" onclick="copyToClipboard(this)"
+                            data-original-text="Salin No. Rekening"
+                            class="bg-gray-500 hover:bg-gray-600 text-white p-2 rounded-lg text-xs mt-3 copy-button">
+                            <i class="fi fi-ss-copy-alt"></i>
+                            Salin No. Rekening
+                        </button>
+                    </div>
+                    <!-- rekening 3  -->
+                    <div class="bg-white p-4 space-y-2 md:p-6 md:px-19 rounded-lg text-left text-colortext"
+                        data-aos="fade-up" data-aos-duration="3000">
+                        <div class="flex justify-between items-between">
+                            <img src="./assets/icons/chip-bank.png" class="w-16 mb-3" />
+                            <img src="./assets/icons/logo-dana.png" class="h-8" />
+                        </div>
+                        <div class="text-sm text-background300 font-semibold font-sono">
+                            An. Muhamad Amin
+                        </div>
+                        <div class="text-sm text-background300 font-sono" id="accountNumber">
+                            081296712762
+                        </div>
+                        <button id="copyAccountButton" onclick="copyToClipboard(this)"
+                            data-original-text="Salin No. Rekening"
+                            class="bg-gray-500 hover:bg-gray-600 text-white p-2 rounded-lg text-xs mt-3 copy-button">
+                            <i class="fi fi-ss-copy-alt"></i>
+                            Salin No. Rekening
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ucapan dan doa  -->
+            <div class="p-5 md:px-8 py-12 bg-background150 space-y-5">
+                <div class="space-y-3">
+                    <div data-aos="zoom-in" class="font-tangerine font-bold text-5xl">Ucapan dan Do'a</div>
+                    <div data-aos="fade-up" class="text-sm">
+                        Berikan ucapan terbaik untuk kedua mempelai.
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 gap-5 reveal fade-bottom p-3 rounded-xl text-start">
+                    <form data-aos="fade-up" id="commentForm" class="grid grid-cols-1 gap-4">
+                        <div>
+                            <label for="author" class="block mb-2 text-sm font-medium">Nama</label>
+                            <input type="text" id="author" name="author"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                placeholder="Masukkan Nama Anda" required />
+                        </div>
+                        <div>
+                            <label for="hadir" class="block mb-2 text-sm font-medium">Kehadiran</label>
+                            <select id="hadir" name="kehadiran"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                placeholder="Pilih Kehadiran" required>
+                                <option value="">--Pilih Kehadiran--</option>
+                                <option value="true">Hadir</option>
+                                <option value="false">Tidak Hadir</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="content" class="block mb-2 text-sm font-medium">Ucapan & Doa</label>
+                            <textarea id="content" name="content" rows="4"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                placeholder="Tulis ucapan dan doa Anda untuk mempelai" required></textarea>
+                        </div>
+                        <div class="justify-self-end">
+                            <button type="submit"
+                                class="bg-white text-background500 hover:bg-background300 hover:text-white py-2 px-6 text-sm rounded-lg">
+                                Kirim
+                            </button>
+                        </div>
+                    </form>
+                    <div data-aos="fade-up">
+                        <hr class="border-3 border-primary" />
+                    </div>
+                    <!-- Komentar -->
+                    <div data-aos="fade-up" id="komentar"
+                        class="overflow-y-auto overscroll-auto no-scrollbar max-h-[400px]"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div>
+                <div class="bg-background200 h-16"></div>
+                <div class="bg-background400 p-5 md:px-8 py-10 space-y-4">
+                    <div data-aos="fade-up" class="text-sm">
+                        Atas kehadiran dan do’a restu dari Bapak/Ibu/Saudara/I sekalian, kami mengucapkan Terima Kasih.
+                    </div>
+                    <div data-aos="fade-up" class="font-qwitcher text-4xl">
+                        Wassalamualaikum Wr. Wb.
+                    </div>
+                    <div data-aos="fade-up" class="text-sm">
+                        Kami Yang Berbahagia
+                    </div>
+                    <div data-aos="fade-up" class="font-qwitcher text-5xl">Naya & Amin</div>
+                    <div class="text-xs space-y-1">
+                        <div>Made with ♥ by Flexation.Id</div>
+                        <div class="space-x-2">
+                            <a href="https://www.instagram.com/flexation.id/" target="_blank">
+                                <i class="fi fi-brands-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/6285732705891" target="_blank">
+                                <i class="fi fi-brands-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-background200 h-8"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Image md  -->
+    <div class="hidden md:flex md:col-span-2">
+        <div class="sticky top-0 left-0 w-screen h-screen overflow-hidden">
+            <div class="w-full h-full bg-gray-200">
+                <img src="./assets/images/prewed (10).JPEG" class="object-cover w-full h-screen" />
+                <div class="absolute h-full inset-0 z-0">
+                    <div class="bg-black opacity-50 h-full"></div>
+                </div>
+                <div class="absolute inset-0 z-10 flex flex-col justify-end text-center h-screen p-20 gap-8 text-white">
+                    <div class="flex flex-col gap-2">
+                        <p class="font-tangerine tracking-wider text-5xl">The Wedding Of</p>
+                        <h1 class="font-tangerine text-5xl tracking-widest font-bold">
+                            Naya &
+                            Amin
+                        </h1>
+                        <p class="font-cormorant tracking-wider uppercase">
+                            BOGOR, 27 MEI 2025
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pop-Up Modal -->
+    <div id="imageModal"
+        class="fixed inset-0 z-50 hidden flex items-center h-screen justify-center bg-black bg-opacity-80">
+        <div class="relative max-w-3xl w-full h-screen p-4">
+            <!-- Close Button -->
+            <span onclick="imgModal.closeModal()"
+                class="absolute top-0 right-0 text-white text-3xl cursor-pointer p-2">&times;</span>
+
+            <!-- Image Slider -->
+            <div class="m-8 flex justify-center items-center min-h-screen max-h-screen">
+                <img id="modalImage" src="" alt="Image"
+                    class="w-auto h-auto max-h-[calc(100vh-150px)] object-cover rounded-lg" />
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="absolute top-1/2 left-0 transform -translate-y-1/2">
+                <button id="prevBtn" onclick="imgModal.prevImage()" class="text-white text-2xl p-2">
+                    &lt;
+                </button>
+            </div>
+            <div class="absolute top-1/2 right-0 transform -translate-y-1/2">
+                <button id="nextBtn" onclick="imgModal.nextImage()" class="text-white text-2xl p-2">
+                    &gt;
+                </button>
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="./script/api-service.js"></script>
+        <script src="./script/animation.js"></script>
+        <script src="./script/index.js"></script>
+</body>
+
+</html>
