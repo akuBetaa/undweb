@@ -45,6 +45,7 @@ img[src=""] {
 
 .spin {
     animation: spin 2s linear infinite;
+    will-change: transform;
 }
 
 .stop-spin {

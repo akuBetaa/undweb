@@ -133,33 +133,45 @@ function closeCover() {
   audio.play();
 }
 
-//Music
-function playMusic() {
+// musik 
+document.addEventListener("DOMContentLoaded", function () {
   const audio = document.getElementById("audio");
   const rotateButton = document.getElementById("rotateButton");
 
+  // Pastikan file audio siap dimainkan
+  audio.preload = "auto"; // Pastikan file dimuat
+  audio.volume = 1.0; // Sesuaikan volume default
+
   function toggleAudio() {
     if (audio.paused) {
-      audio.play();
-      rotateButton.classList.add("spin");
+      audio.play()
+        .then(() => rotateButton.classList.add("spin"))
+        .catch((err) => console.warn("Autoplay dicegah:", err));
     } else {
       audio.pause();
       rotateButton.classList.remove("spin");
     }
   }
 
-  rotateButton.addEventListener("click", toggleAudio);
+  // Tunggu klik pertama sebelum mengaktifkan playMusic
+  function initPlay() {
+    toggleAudio(); // Langsung play setelah klik pertama
+    rotateButton.removeEventListener("click", initPlay); // Hapus event listener pertama
+    rotateButton.addEventListener("click", toggleAudio); // Pasang event toggle biasa
+  }
 
-  // Tambahkan event listener untuk mematikan musik
+  rotateButton.addEventListener("click", initPlay);
+
+  // Tombol ESC untuk pause musik
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
       audio.pause();
       rotateButton.classList.remove("spin");
     }
   });
-}
 
-// Panggil fungsi playMusic ketika dokumen selesai dimuat
-document.addEventListener("DOMContentLoaded", function () {
-  playMusic();
+  // Tambahkan event listener untuk memastikan audio siap dimainkan
+  audio.addEventListener("canplaythrough", () => {
+    rotateButton.classList.remove("opacity-50"); // Hapus efek loading (kalau ada)
+  });
 });

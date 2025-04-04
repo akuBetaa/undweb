@@ -34,39 +34,3 @@ tailwind.config = {
     },
   },
 };
-
-document.addEventListener("DOMContentLoaded", function () {
-  const lazyImages = document.querySelectorAll("img"); // Seleksi semua elemen img
-
-  if ("IntersectionObserver" in window) {
-    // Jika browser mendukung IntersectionObserver
-    let lazyImageObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          let img = entry.target;
-          // Memeriksa jika gambar belum dimuat dan memiliki data-src
-          if (img.dataset.src && !img.classList.contains("loaded")) {
-            img.src = img.dataset.src; // Ganti src dengan data-src
-            img.removeAttribute("data-src"); // Hapus data-src
-            img.classList.add("loaded"); // Tandai gambar telah dimuat
-            lazyImageObserver.unobserve(img); // Hentikan observasi gambar
-          }
-        }
-      });
-    });
-
-    lazyImages.forEach((img) => {
-      // Jika gambar tidak memiliki data-src, tetapkan data-src dan kosongkan src-nya
-      if (!img.src) {
-        img.dataset.src = img.getAttribute("src"); // Simpan src pada data-src
-        img.src = ""; // Kosongkan src untuk menunda pemuatan
-      }
-      lazyImageObserver.observe(img); // Mulai observasi gambar
-    });
-  } else {
-    // Fallback untuk browser yang tidak mendukung IntersectionObserver
-    lazyImages.forEach((img) => {
-      img.src = img.dataset.src;
-    });
-  }
-});
