@@ -33,7 +33,7 @@ const imgModal = (() => {
 //COUNTDOWN TIMER
 function countDown() {
   // Set the date we're counting down to
-  const countDownDate = new Date("May 11, 2025 08:00:00").getTime();
+  const countDownDate = new Date("Juny 11, 2025 08:00:00").getTime();
 
   // Update the count down every 1 second
   const x = setInterval(function () {
@@ -78,7 +78,7 @@ countDown();
 // Set up the "Save to Calendar" link
 function saveToCalendar() {
   const title = "Wedding Shella & Amal | @flexation.id";
-  const startDate = new Date("May 11, 2025 08:00:00");
+  const startDate = new Date("Juny 11, 2025 08:00:00");
   const endDate = new Date(startDate.getTime() + 1 * 60 * 60 * 1000);
 
   const startDateISO = startDate.toISOString().replace(/-|:|\.\d+/g, "");
