@@ -11,3 +11,5 @@ function getQueryParameter(param) {
   if (namaTamu) {
     document.getElementById('nama-tamu').textContent = `${namaTamu}`;
   }
+
+  
