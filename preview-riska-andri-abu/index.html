@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riska & Andri | @flexation.id</title>
+    <link rel="preload" href="./styles/index.css" as="style">
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="icon" href="./assets/icons/flexation-pink.png" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-straight/css/uicons-bold-straight.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+</head>
+
+<body
+    class="font-noto text-text50 relative bg-secondary200 text-center lg:grid lg:grid-cols-3 lg:min-h-screen overflow-x-hidden max-w-screen">
+    <div></div>
+    <main class="relative">
+        <!-- cover -->
+        <div class="absolute inset z-50 transition-transform duration-700 bg-fixed bg-cover bg-center" style="background-image: url('./assets/background.png');" id="cover-modal">
+            <div id="cover-modal" class="">
+                <!-- text content  -->
+                <div class="relative z-20 flex flex-col justify-center text-center h-screen p-10 py-40 gap-20">
+                    <div class=" flex flex-col gap-2 uppercase">
+                        <p class="font-montserrat font-medium tracking-wider">THE WEDDING OF</p>
+                        <h1 class="font-cormorant text-6xl font-extrabold tracking-widest">
+                            Riska & Andri
+                        </h1>
+                        <div class="font-montserrat font-medium tracking-wider text-xs">MINGGU, 11 MEI 2025</div>
+                    </div>
+                    <div class=" font-nunito text-sm italic flex flex-col gap-3">
+                        <p>Kepada Yth. Bapak/Ibu/Saudara/i</p>
+                        <h1 class="not-italic text-2xl font-bodonimoda font-semibold">
+                            <div id="nama-tamu">Nama Tamu</div>
+                        </h1>
+                        <p>*Mohon Maaf apabila ada kesalahan pada <br> penulisan nama dan gelar</p>
+                        <div class="">
+                            <button class="font-semibold" onclick="closeCover()">
+                                <div
+                                    class="flex items-center justify-center text-sm gap-2 py-2 px-4 rounded text-secondary200 bg-white hover:text-colortext">
+                                    <i class="fi fi-rr-envelope-open-text"></i>
+                                    <span>Open Invitation</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- konten utama -->
+        <div id="main-content" class="relative z-10 hidden no-scrollbar">
+            <!-- music  -->
+            <div>
+                <div class="fixed z-50 bottom-4 start-4">
+                    <div id="rotateButton"
+                        class="spin px-2 pt-2 text-center cursor-pointer bg-gradient-to-b bg-primary200 from-background50 to-background100 rounded-full">
+                        <i class="fi fi-rs-record-vinyl text-2xl text-white"></i>
+                    </div>
+                </div>
+                <audio autoplay loop id="audio" src="./assets/music/Nyoman Paul, Andi Rianto – The Way You Look At Me.mp3"
+                    type="audio/mpeg"></audio>
+            </div>
+
+            <!-- header -->
+            <div class="min-h-screen max-h-screen relative overflow-hidden flex flex-col justify-between">
+                <img loading='lazy' src="./assets/images/cover.jpeg" alt="Flexation | Riska & Andri"
+                    class="object-cover w-full min-h-screen max-h-screen absolute inset-0 z-0" />
+                <div class=" absolute inset-0 z-10 grid">
+                    <div class="bg-gradient-to-t from-secondary200 to-transparent bg-opacity-100"></div>
+                </div>
+
+                <!-- Konten di atas gambar -->
+                <div class="absolute inset-0 z-20 flex flex-col justify-between">
+                    <!-- Bagian atas -->
+                    <div></div>
+                    <div></div>
+                    <div>
+                        <div class="flex justify-end items-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                                <path fill="#D1D5DB" fill-opacity="1"
+                                    d="M0,32L60,58.7C120,85,240,139,360,149.3C480,160,600,128,720,112C840,96,960,96,1080,122.7C1200,149,1320,203,1380,229.3L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <!-- Bagian bawah -->
+                        <div
+                            class="text-left text-primary100 flex flex-col items-start justify-end p-8 pb-12 pt-0 space-y-3 bg-secondary50">
+                            <div data-aos="fade-up" data-aos-duration="3000">The Wedding Of</div>
+                            <div data-aos="fade-up" data-aos-duration="3000"
+                                class="text-4xl font-extrabold font-cormorant">Riska & Andri</div>
+                            <div data-aos="fade-up" data-aos-duration="3000" class="uppercase font-medium text-sm">
+                                Minggu, 11 Mei 2025</div>
+                            <button id="save-to-calender" data-aos="fade-up" data-aos-duration="3000"
+                                class="font-medium text-xs flex items-center gap-3 bg-primary200 text-white py-2 px-3 rounded-md hover:bg-white hover:text-primary200">
+                                <i class="fi fi-rs-calendar"></i>
+                                <span>Save to Calender</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- hitung mundur  -->
+            <div class="flex flex-col justify-center items-center p-8 md:px-8 pb-8 pt-6 bg-primary100 text-white">
+                <img src="./assets/icons/flower.svg" data-aos="fade-up" data-aos-duration="3000"
+                    class="w-20 h-18 object-cover" alt="">
+                <div class='space-y-3'>
+                    <div data-aos="fade-up" data-aos-duration="3000" class="font-semibold font-cormorant text-2xl">Our
+                        Special Day</div>
+                    <div data-aos="fade-up" data-aos-duration="3000"
+                        class="flex font-josefin justify-center gap-10 text-xs">
+                        <div class="flex flex-col items-center">
+                            <h1 id="days" class="text-3xl font-light"></h1>
+                            <p>Hari</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <h1 id="hours" class="text-3xl font-light"></h1>
+                            <p>Jam</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <h1 id="minutes" class="text-3xl font-light"></h1>
+                            <p>Menit</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <h1 id="seconds" class="text-3xl font-light"></h1>
+                            <p>Detik</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- calon pengantin -->
+            <div class="p-8 md:px-8 py-10 bg-secondary100 min-h-screen space-y-5">
+                <div data-aos="fade-up" data-aos-duration="3000" class="text-sm">
+                    Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i serta kerabat sekalian untuk
+                    menghadiri acara pernikahan kami :
+                </div>
+                <div class="space-y-5">
+                    <!-- pengantin perempuan -->
+                    <div class="flex flex-col items-center text-sm px-2">
+                        <div data-aos="fade-up" data-aos-duration="3000" class="cursor-pointer object-cover">
+                            <img loading="lazy" src="./assets/images/mempelai-wanita1.jpeg"
+                                alt="Flexation | Riska & Andri"
+                                class="w-44 h-60 max-h-full rounded-full object-cover border border-primary100 border-4"
+                                onclick="imgModal.openModal(this)" />
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="3000"
+                            class="font-cormorant font-extrabold text-4xl py-2">
+                            Riska Agustin
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="3000">
+                            <div>Putri Kedua dari</div>
+                            <div>Bapak Deden Aang dan Lilis Lisnawati</div>
+                            <div>Jl. Cikambuy Tengah Kec. Katapang, <br> Ds. Sangkanhurip</div>
+                            <div class="pt-2 text-white">
+                                <a href="https://www.instagram.com/riskaagstne_" target="_blank"
+                                    class="bg-primary200 rounded-full p-1">
+                                    <i class="fi fi-brands-instagram pb-0 "></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="zoom-in" data-aos-duration="3000" class="font-cormorant font-bold text-5xl">
+                        &
+                    </div>
+                    <!-- pengantin laki-laki -->
+                    <div class="flex flex-col items-center text-sm px-2">
+                        <div data-aos="fade-up" data-aos-duration="3000" class="cursor-pointer object-cover">
+                            <img loading="lazy" src="./assets/images/mempelai-pria1.jpeg" alt="Flexation | Riska & Andri"
+                                class="w-44 h-60 max-h-full rounded-full object-cover border border-primary100 border-4"
+                                onclick="imgModal.openModal(this)" />
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="3000"
+                            class="font-cormorant font-extrabold text-4xl py-2">
+                            Andri Awaludin
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="3000">
+                            <div>Putra Pertama dari</div>
+                            <div>Bapak Maman Abdulrohman dan Eni</div>
+                            <div>Jl. Baraja Kec. Katapang Ds. Cilampeni</div>
+                            <div class="pt-2 text-white">
+                                <a href="https://www.instagram.com/andriaw_" target="_blank"
+                                    class="bg-primary200 rounded-full p-1">
+                                    <i class="fi fi-brands-instagram pb-0 "></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- surah  -->
+            <div class="text-xs text-white p-8 md:px-8 py-10 bg-primary100 space-y-3 rounded-xl">
+                <div data-aos="fade-up" data-aos-duration="3000" class="italic">
+                    “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari
+                    jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu
+                    rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran
+                    Allah) bagi kaum yang berpikir”
+                </div>
+                <div data-aos="fade-up" data-aos-duration="3000" class="text-base">(Q.R Ar Rum : 21)</div>
+            </div>
+
+            <!-- love story  -->
+            <div class="p-8 md:px-8 py-10 bg-secondary100 space-y-5">
+                <div data-aos="zoom-in" data-aos-duration="3000" class="font-cormorant font-extrabold text-4xl py-2">
+                    Love Story
+                </div>
+                <div class="text-sm text-white bg-primary100 rounded-xl">
+                    <div class="relative">
+                        <img loading='lazy' src="./assets/images/cover-3.jpeg" alt="Flexation | Riska & Andri"
+                            class="object-cover w-full h-auto rounded-t-xl" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary100 to-transparent"></div>
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <div data-aos="fade-up" data-aos-duration="3000" class="space-y-3">
+                            <div class="font-cormorant text-xl">First Meet (2023)</div>
+                            <hr>
+                            <div class="text-xs">
+                                5 Juli 2023 kami saling mengenal satu sama lain melalui Pertemuan tidak Sengaja dan
+                                Saling bertukar No Whatsapp .
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="3000" class="space-y-3">
+                            <div class="font-cormorant text-xl">Relationship (2023)</div>
+                            <hr>
+                            <div class="text-xs">
+                                11 Agustus 2023 Karna kerjaan beda pulau , kami baru bertemu kembali dan merasa saling
+                                cocok akhirnya kami menjalin hubungan sebagai pasangan kekasih .
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="3000" class="space-y-3">
+                            <div class="font-cormorant text-xl">Married 2025</div>
+                            <hr>
+                            <div class="text-xs">
+                                1,5 Tahun kami menjalani komitmen tersebut . Kami memutuskan untuk mengikat janji
+                                pernikahan pada 22 January 2025.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- acara  -->
+            <div class="min-h-screen bg-fixed bg-center bg-cover"
+                style="background-image: url('./assets/images/prewed\ \(3\).jpeg');">
+                <div class="min-h-screen bg-secondary50 bg-opacity-50 p-8 md:px-8 py-10 ">
+                    <div
+                        class="text-primary200 bg-secondary50 bg-opacity-90 rounded-t-full pt-24 py-10 space-y-5 border border-2 border-primary200">
+                        <div class="px-5">
+                            <div data-aos="zoom-in" data-aos-duration="3000"
+                                class="font-cormorant font-extrabold text-4xl">Akad Nikah</div>
+                            <div data-aos="fade-up" data-aos-duration="3000"
+                                class="upprercase flex justify-center items-center gap-5 text-sm py-5">
+                                <div class="text-2xl font-cormorant">JAN</div>
+                                <div class="border border-l-2 h-24 border-primary200 "></div>
+                                <div class="">
+                                    <div class="text-xl font-italiana font-bold">RABU</div>
+                                    <div class="pb-2 text-5xl font-cormorant font-extrabold">22</div>
+                                    <div>09.00 WIB</div>
+                                </div>
+                                <div class="border border-l-2 h-24 border-primary200 "></div>
+                                <div class="text-2xl font-cormorant">2025</div>
+                            </div>
+                            <div data-aos="fade-up" data-aos-duration="3000" class="space-y-1">
+                                <div class="text-sm">Alamat</div>
+                                <div class="text-sm">
+                                    Kp. Cikambuy Tengah Rt/Rw 03/07 <br> Kec. Katapang. Ds. Sangkanhurip
+                                </div>
+                                <div data-aos="fade-up">
+                                    <a href="https://maps.app.goo.gl/pyGKrRUQ3FJeAqcT7" target="_blank">
+                                        <button class="bg-primary50 text-xs p-1 px-3 rounded-full text-text50">
+                                            <i class="fi fi-rs-map-marker"></i> Lihat Maps
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <hr class="border-2 border-primary100 w-1/2">
+                        </div>
+                        <div class="px-5">
+                            <div data-aos="zoom-in" data-aos-duration="3000"
+                                class="font-cormorant font-extrabold text-4xl">Resepsi</div>
+                            <div data-aos="fade-up" data-aos-duration="3000"
+                                class="upprercase flex justify-center items-center gap-5 text-sm py-5">
+                                <div class="text-2xl font-cormorant">MEI</div>
+                                <div class="border border-l-2 h-24 border-primary200 0"></div>
+                                <div class="">
+                                    <div class="text-xl font-italiana font-bold">MINGGU</div>
+                                    <div class="pb-2 text-5xl font-cormorant font-extrabold">11</div>
+                                    <div>11.00 WIB <br> s.d Selesai</div>
+                                </div>
+                                <div class="border border-l-2 h-24 border-primary200 "></div>
+                                <div class="text-2xl font-cormorant">2025</div>
+                            </div>
+                            <div data-aos="fade-up" data-aos-duration="3000" class="space-y-1">
+                                <div class="text-sm">Alamat</div>
+                                <div class="text-sm">
+                                    Kp. Cikambuy Tengah Rt/Rw 03/07 <br> Kec. Katapang. Ds. Sangkanhurip
+                                </div>
+                                <div data-aos="fade-up">
+                                    <a href="https://maps.app.goo.gl/pyGKrRUQ3FJeAqcT7" target="_blank">
+                                        <button class="bg-primary50 text-xs p-1 px-3 rounded-full text-white">
+                                            <i class="fi fi-rs-map-marker"></i> Lihat Maps
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- galeri foto  -->
+            <div class="p-8 md:px-8 py-10 bg-primary100 space-y-5">
+                <div data-aos="zoom in" data-aos-duration="3000"
+                    class="font-cormorant text-white font-extrabold text-4xl py-2">
+                    Galeri Foto
+                </div>
+                <div class="grid grid-cols-2 gap-2" data-aos="fade-up" data-aos-duration="3000">
+                    <div class="flex flex-col gap-2">
+                        <div data-aos="fade-up" data-aos-duration="3000" class="rounded-xl cursor-pointer object-cover">
+                            <img loading="lazy" src="./assets/images/prewed (1).jpeg" alt="Flexation | Riska & Andri"
+                                class="h-auto w-full max-w-full object-cover rounded-md"
+                                onclick="imgModal.openModal(this)" />
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="3000" class="rounded-xl cursor-pointer object-cover">
+                            <img loading="lazy" src="./assets/images/prewed (2).jpeg" alt="Flexation | Riska & Andri"
+                                class="h-auto w-full max-w-full object-cover rounded-md"
+                                onclick="imgModal.openModal(this)" />
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <div data-aos="fade-up" data-aos-duration="3000" class="rounded-xl cursor-pointer object-cover">
+                            <img loading="lazy" src="./assets/images/prewed (3).jpeg" alt="Flexation | Riska & Andri"
+                                class="h-auto w-full max-w-full object-cover rounded-md"
+                                onclick="imgModal.openModal(this)" />
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="3000" class="rounded-xl cursor-pointer object-cover">
+                            <img loading="lazy" src="./assets/images/prewed (4).jpeg" alt="Flexation | Riska & Andri"
+                                class="h-auto w-full max-w-full object-cover rounded-md"
+                                onclick="imgModal.openModal(this)" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- dompet digital  -->
+            <div class="bg-secondary200">
+                <div class="bg-secondary200 rounded-t-2xl p-8 md:px-8 py-10">
+                    <div class="bg-primary50 p-5 md:px-8 space-y-3 rounded-xl">
+                        <div data-aos="zoom-in" data-aos-duration="3000" class="font-cormorant font-extrabold text-3xl">
+                            Dompet Digital
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="3000" class="text-xs">
+                            Doa Restu Anda merupakan karunia yang sangat berarti bagi kami. Dan jika memberi adalah
+                            ungkapan tanda kasih Anda, Anda dapat memberi kado secara cashless.
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="3000">
+                            <button id="toggleButton" class="bg-primary200 text-xs text-white p-2 px-4 rounded-full">
+                                <i class="fi fi-rs-map-marker"></i> Klik Disini
+                            </button>
+                        </div>
+
+                        <div id="hiddenContent"
+                            class="space-y-3 text-primary hidden transform -translate-y-4 opacity-0 transition-all duration-500 ease-in-out">
+                            <!-- rekening 1 -->
+                            <div class="bg-white p-4 space-y-2 md:p-6 md:px-19 rounded-lg text-left text-colortext"
+                                data-aos="fade-up" data-aos-duration="3000">
+                                <div class="flex justify-between items-between">
+                                    <img loading="lazy" src="./assets/icons/chip-bank.png" class="w-14 mb-3" />
+                                    <img loading="lazy" src="./assets/icons/logo-mandiri.png" class="h-8" />
+                                </div>
+                                <div class="text-sm text-background300 font-semibold font-sono">
+                                    An. Andri Awaludin
+                                </div>
+                                <div class="text-sm text-background300 font-sono" id="accountNumber">
+                                    1350013867906
+                                </div>
+                                <button id="copyAccountButton" onclick="copyToClipboard(this)"
+                                    data-original-text="Salin No. Rekening"
+                                    class="bg-gray-500 hover:bg-gray-600 text-white p-2 rounded-lg text-xs mt-3 copy-button">
+                                    <i class="fi fi-ss-copy-alt"></i>
+                                    Salin No. Rekening
+                                </button>
+                            </div>
+                            <!-- rekening 2 -->
+                            <div class="bg-white p-4 space-y-2 md:p-6 md:px-19 rounded-lg text-left text-colortext"
+                                data-aos="fade-up" data-aos-duration="3000">
+                                <div class="flex justify-between items-between">
+                                    <img loading="lazy" src="./assets/icons/chip-bank.png" class="w-14 mb-3" />
+                                    <img loading="lazy" src="./assets/icons/logo-mandiri.png" class="h-8" />
+                                </div>
+                                <div class="text-sm text-background300 font-semibold font-sono">
+                                    An. Riska Agustin
+                                </div>
+                                <div class="text-sm text-background300 font-sono" id="accountNumber">
+                                    1320024503618
+                                </div>
+                                <button id="copyAccountButton" onclick="copyToClipboard(this)"
+                                    data-original-text="Salin No. Rekening"
+                                    class="bg-gray-500 hover:bg-gray-600 text-white p-2 rounded-lg text-xs mt-3 copy-button">
+                                    <i class="fi fi-ss-copy-alt"></i>
+                                    Salin No. Rekening
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ucapan dan doa  -->
+            <div class="bg-primary50 space-y-2">
+                <div class="relative text-white">
+                    <img loading='lazy' src="./assets/images/cover-5.jpeg" alt="Flexation | Riska & Andri"
+                        class="object-cover w-full h-auto" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary50 to-transparent">
+                        <div data-aos="zoom-in" data-aos-duration="3000"
+                            class="flex h-full items-end font-cormorant font-extrabold text-4xl text-start p-8 md:px-8 py-10 pb-0">
+                            Wishes
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8 md:px-8 py-10 pt-0 space-y-2">
+                    <div data-aos="fade-up" data-aos-duration="3000" class="text-sm text-start">
+                        Kepada Bapak/Ibu/Saudara/i yang ingin memberikan ucapan kepada kami dapat dituliskan di bawah
+                        ini
+                    </div>
+                    <div class="grid grid-cols-1 gap-5 reveal fade-bottom p-3 px-0 rounded-xl text-start">
+                        <form data-aos="fade-up" id="postComment" class="grid grid-cols-1 gap-4">
+                            <div>
+                                <label for="author" class="block mb-2 text-sm font-medium">Nama</label>
+                                <input type="text" id="author" name="author"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                    placeholder="Masukkan Nama Anda" required />
+                            </div>
+                            <div>
+                                <label for="hadir" class="block mb-2 text-sm font-medium">Kehadiran</label>
+                                <select id="hadir" name="kehadiran"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                    placeholder="Pilih Kehadiran" required>
+                                    <option value="">--Pilih Kehadiran--</option>
+                                    <option value="hadir">Hadir</option>
+                                    <option value="tidak_hadir">Tidak Hadir</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="content" class="block mb-2 text-sm font-medium">Ucapan & Doa</label>
+                                <textarea id="content" name="content" rows="4"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                    placeholder="Tulis ucapan dan doa Anda untuk mempelai" required></textarea>
+                            </div>
+                            <div class="justify-self-end">
+                                <button type="submit"
+                                    class="bg-white text-primary200 hover:bg-primary100 hover:text-black py-2 px-6 text-sm rounded-lg">
+                                    Kirim
+                                </button>
+                            </div>
+                        </form>
+                        <div data-aos="fade-up">
+                            <hr class="border border-3 border-primary100" />
+                        </div>
+                        <!-- Komentar -->
+                        <div data-aos="fade-up" id="comments"
+                            class="overflow-y-auto overscroll-auto no-scrollbar max-h-[400px]"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Penutup  -->
+            <div class="relative min-h-screen ">
+                <div class=" absolute inset-0 z-10 grid">
+                    <div>
+                        <div class="bg-secondary200 text-text100 text-start p-8 md:px-8 py-10 space-y-2">
+                            <div data-aos="fade-up" data-aos-duration="3000"
+                                class="font-cormorant font-extrabold text-2xl">Terimakasih</div>
+                            <div data-aos="fade-up" data-aos-duration="3000" class="text-xs">
+                                Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i,
+                                berkenan hadir dan memberikan do’a restu kepada kami.
+                            </div>
+                            <div data-aos="fade-up" data-aos-duration="3000"
+                                class="font-cormorant font-extrabold text-3xl">Riska & Andri</div>
+                        </div>
+                        <div class="bg-gradient-to-b from-secondary200 to-transparent bg-opacity-100 h-24"></div>
+                    </div>
+                    <div></div>
+                    <div class="flex flex-col self-end">
+                        <div class="bg-primary100 text-center flex flex-col items-center justify-center p-8">
+                            <div class="text-xs space-y-2">
+                                <div>Made with ♥ by Flexation.Id</div>
+                                <div class="space-x-2">
+                                    <a href="https://www.instagram.com/flexation.id/" target="_blank">
+                                        <i class="fi fi-brands-instagram"></i>
+                                    </a>
+                                    <a href="https://wa.me/6285732705891" target="_blank">
+                                        <i class="fi fi-brands-whatsapp"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="./assets/images/cover-2.jpeg" class="object-cover h-screen w-full" alt="">
+            </div>
+        </div>
+    </main>
+    <div></div>
+
+    <!-- Pop-Up Modal -->
+    <div id="imageModal"
+        class="fixed inset-0 z-50 hidden flex items-center h-screen justify-center bg-black bg-opacity-80">
+        <div class="relative max-w-3xl w-full h-screen p-4">
+            <!-- Close Button -->
+            <span onclick="imgModal.closeModal()"
+                class="absolute top-0 right-0 text-white text-3xl cursor-pointer p-2">&times;</span>
+
+            <!-- Image Slider -->
+            <div class="m-8 flex justify-center items-center min-h-screen max-h-screen">
+                <img loading="lazy" id="modalImage" src="" alt="Image"
+                    class="w-auto h-auto max-h-[calc(100vh-150px)] object-cover rounded-lg" />
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="absolute top-1/2 left-0 transform -translate-y-1/2">
+                <button id="prevBtn" onclick="imgModal.prevImage()" class="text-white text-2xl p-2">
+                    &lt;
+                </button>
+            </div>
+            <div class="absolute top-1/2 right-0 transform -translate-y-1/2">
+                <button id="nextBtn" onclick="imgModal.nextImage()" class="text-white text-2xl p-2">
+                    &gt;
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('toggleButton').addEventListener('click', function () {
+            const hiddenContent = document.getElementById('hiddenContent');
+            if (hiddenContent.classList.contains('hidden')) {
+                hiddenContent.classList.remove('hidden');
+                setTimeout(() => {
+                    hiddenContent.classList.remove('-translate-y-4', 'opacity-0');
+                }, 10);
+            } else {
+                hiddenContent.classList.add('-translate-y-4', 'opacity-0');
+                setTimeout(() => {
+                    hiddenContent.classList.add('hidden');
+                }, 500);
+            }
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/animation.js" defer></script>
+    <script src="./scripts/api-service.js" async></script>
+</body>
+
+</html>
