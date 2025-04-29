@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saleha & Tito | @flexation.id</title>
+    <link rel="preload" href="./preview-saleha-tito/preview-saleha-tito/styles/index.css" as="style">
+    <link rel="stylesheet" href="./preview-saleha-tito/styles/index.css" />
+    <link rel="icon" href="./preview-saleha-tito/assets/icons/flexation-pink.png" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-straight/css/uicons-bold-straight.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+</head>
+
+<body id='token'
+    class="relative font-sansation text-text50 bg-background50 lg:grid lg:grid-cols-3 lg:min-h-screen no-scrollbar no-scrollbar overflow-x-hidden max-w-screen">
+    <div></div>
+
+    <main class="relative lg:shadow-xl">
+        <!-- cover  -->
+        <div id="cover-modal" class="min-h-screen max-h-screen px-0 pb-8 py-16 flex flex-col justify-between">
+            <div class="flex items-end justify-end">
+                <div class="-rotate-90 text-xl font-semibold font-justanotherhand tracking-widest">Saleha & Tito</div>
+            </div>
+            <div class="p-8 space-y-7">
+                <div class="font-medium tracking-widest">
+                    Your Presence is Requested <br> To Celebrate the Wedding of
+                </div>
+                <div class="text-7xl lg:text-8xl font-justanotherhand text-text50 tracking-wide">
+                    Saleha & Tito
+                </div>
+                <div class="text-sm tracking-widest font-medium space-y-1">
+                    <div>
+                        Save The Date
+                    </div>
+                    <div>
+                        Friday, 27 Juny 2025
+                    </div>
+                </div>
+                <div class="font-bold text-sm">#SToForever</div>
+            </div>
+            <div class="p-8 text-center font-semibold space-y-2">
+                <div class="text-sm">Kepada Yth</div>
+                <div id="nama-tamu" class="text-lg font-bold">Nama Tamu</div>
+                <button onclick="closeCover()"
+                    class="text-xs border border-text50 bg-background50 p-2 px-5 rounded-xl hover:bg-background200 hover:text-black">
+                    <div class="flex items-center justify-center space-x-2">
+                        <i class="fi fi-rr-envelope"></i>
+                        <span>Buka Undangan</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- konten utama  -->
+        <div id="main-content" class="hidden relative z-10 no-scrollbar">
+            <!-- music & menu bar  -->
+            <div>
+                <div class="fixed z-50 bottom-4 start-4">
+                    <div id="rotateButton"
+                        class="spin px-2 pt-2 text-center cursor-pointer bg-gradient-to-b bg-background100 from-text50 to-text50 rounded-full">
+                        <i class="fi fi-rs-record-vinyl text-2xl text-white"></i>
+                    </div>
+                </div>
+                <audio autoplay loop id="audio" src="./preview-saleha-tito/assets/music/Juicy Luicy - Lagu Nikah.mp3"
+                    type="audio/mpeg"></audio>
+            </div>
+            <!-- header  -->
+            <div class="p-8 pt-32 space-y-3">
+                <div data-aos="fade-up" data-aos-duration="3000" class="font-nothingyoucoulddo text-5xl font-semibold">With You</div>
+                <div data-aos="fade-up" data-aos-duration="3000">
+                    No relationship is all sunshine, but two <br> people can share one umbrella and <br> survive the
+                    storm together.
+                </div>
+                <div data-aos="fade-up" data-aos-duration="3000" class="border border-background100 p-5 bg-background150 rounded shadow-xl">
+                    <div class="border border-background100 rounded bg-orange-100 inset-shadow-lg">
+                        <img src="./preview-saleha-tito/assets/images/cover.png" alt="">
+                    </div>
+                    <div class="font-bold text-sm text-center mt-3">#SToForever</div>
+                </div>
+            </div>
+            <!-- nama lengkung  -->
+            <div class="flex justify-end items-center overflow-x-hidden px-0">
+                <svg viewBox="0 0 200 200" class="w-56 h-56 mr-[-115px] px-0">
+                    <defs>
+                        <!-- Path setengah lingkaran -->
+                        <path id="halfCirclePath" d="M 100, 100 m 0, -75 a 75,75 0 1,0 0,150" />
+                    </defs>
+                    <text class="tracking-widest text-text50 text-sm uppercase">
+                        <textPath href="#halfCirclePath" startOffset="0%">
+                            SALEHA & TITO & SALEHA & TITO & SALEHA & TITO
+                        </textPath>
+                    </text>
+                </svg>
+            </div>
+            <!-- acara  -->
+            <div class="text-center p-8 space-y-10 flex flex-col justify-center items-center">
+                <div class="space-y-5">
+                    <div data-aos="fade-up" data-aos-duration="3000" class="text-2xl">بسم الله الرحمن الرحيم</div>
+                    <div data-aos="fade-up" data-aos-duration="3000" class="uppercase">We Invite You To Join Wedding</div>
+                </div>
+                <div class="space-y-5 font-justanotherhand tracking-wider text-6xl">
+                    <div data-aos="fade-up" data-aos-duration="3000">
+                        Saleha Putri Liana
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="3000" class="font-thin text-4xl">&</div>
+                    <div data-aos="fade-up" data-aos-duration="3000">
+                        Syamsi Tito Hazizi
+                    </div>
+                </div>
+                <div class="space-y-8 flex flex-col justify-center items-center">
+                    <div data-aos="fade-up" data-aos-duration="3000" class="font-extrabold font-playfair text-4xl">27 . 06 . 2025</div>
+                    <div class="w-[3px] h-20 bg-background100"></div>
+                    <div class="grid grid-cols-1 gap-2 font-medium font-librefranklin uppercase text-sm">
+                        <div data-aos="fade-up" data-aos-duration="3000" class="space-y-1">
+                            <div class="font-bold">AKAD NIKAH</div>
+                            <div>08.30 WIB - 11.00 WIB</div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="3000" class="font-librefranklin space-y-1">
+                        <div class="uppercase font-bold text-lg">Lokasi</div>
+                        <div class="text-sm px-4">
+                            Masjid Raya Citra Grand City
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <!-- hitung mundur  -->
+            <div class="p-8 space-y-5 flex flex-col justify-center items-center">
+                <div data-aos="fade-up" data-aos-duration="3000" class="font-nothingyoucoulddo font-semibold text-2xl">We're Getting Merried!</div>                
+                <div data-aos="fade-up" data-aos-duration="3000" class="flex font-paprika justify-center gap-2 text-sm">
+                    <div
+                        class="flex flex-col items-center border border-background150 bg-background150 rounded-tl-2xl rounded-br-2xl p-3 inset-shadow">
+                        <h1 id="days" class="text-xl"></h1>
+                        <p>Hari</p>
+                    </div>
+                    <div
+                        class="flex flex-col items-center border border-background150 bg-background150 rounded-tl-2xl rounded-br-2xl p-3 inset-shadow">
+                        <h1 id="hours" class="text-xl"></h1>
+                        <p>Jam</p>
+                    </div>
+                    <div
+                        class="flex flex-col items-center border border-background150 bg-background150 rounded-tl-2xl rounded-br-2xl p-3 inset-shadow">
+                        <h1 id="minutes" class="text-xl"></h1>
+                        <p>Menit</p>
+                    </div>
+                    <div
+                        class="flex flex-col items-center border border-background150 bg-background150 rounded-tl-2xl rounded-br-2xl p-3 inset-shadow">
+                        <h1 id="seconds" class="text-xl"></h1>
+                        <p>Detik</p>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <button id="save-to-calender"
+                        class="font-medium text-xs flex items-center justify-center gap-3 bg-background100 text-text50 py-2 px-3 rounded-full hover:bg-white hover:text-background300">
+                        <i class="fi fi-rs-calendar"></i>
+                        <span>Save to Calender</span>
+                    </button>
+                </div>
+            </div>
+            <!-- surah  -->
+            <div class="text-center text-xs p-8 space-y-2">
+                <div>
+                    Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berfikir.
+                </div>
+                <div>
+                    (Q.S Ar Rum : 21)
+                </div>
+            </div>
+            <!-- ucapan  -->
+            <div class="p-5 space-y-3">
+                <img src="./preview-saleha-tito/assets/elements/line-love.svg" class="px-28 mb-10" alt="">
+                <div class="space-y-3">
+                    <div data-aos="fade-up" data-aos-duration="3000" class="font-nothingyoucoulddo text-4xl font-semibold text-center">
+                        Write Your Wishes
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="3000" class="font-nothingyoucoulddo font-semibold tracking-wide text-3xl">
+                        Note
+                    </div>
+                    <div class="w-full h-[2px] bg-background100"></div>
+                    <div class="w-full h-[2px] bg-background100"></div>
+                </div>
+                <div  data-aos="fade-up" data-aos-duration="3000" class="font-nothingyoucoulddo tracking-wide font-bold text-xl">
+                    To : Saleha & Tito
+                </div>
+                <div
+                    class="grid grid-cols-1 gap-5 reveal fade-bottom p-3 rounded-xl text-start border border-background100 bg-background100 p-3">
+                    <form data-aos="fade-up" data-aos-duration="3000" id="postComment" class="grid grid-cols-1 gap-4">
+                        <div>
+                            <label for="author" class="block mb-2 text-sm font-medium">Nama</label>
+                            <input type="text" id="author" name="author"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                placeholder="Masukkan Nama Anda" required />
+                        </div>
+                        <div>
+                            <label for="hadir" class="block mb-2 text-sm font-medium">Kehadiran</label>
+                            <select id="hadir" name="kehadiran"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                placeholder="Pilih Kehadiran" required>
+                                <option value="">--Pilih Kehadiran--</option>
+                                <option value="hadir">Hadir</option>
+                                <option value="tidak_hadir">Tidak Hadir</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="content" class="block mb-2 text-sm font-medium">Ucapan & Doa</label>
+                            <textarea id="content" name="content" rows="4"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                placeholder="Tulis ucapan dan doa Anda untuk mempelai" required></textarea>
+                        </div>
+                        <div class="justify-self-end">
+                            <button type="submit"
+                                class="bg-background150 text-text50 hover:bg-background150 hover:text-white py-2 px-6 text-sm rounded-full">
+                                Kirim
+                            </button>
+                        </div>
+                    </form>
+                    <div data-aos="fade-up">
+                        <hr class="border-3 border-background150" />
+                    </div>
+                    <!-- Komentar -->
+                    <div data-aos="fade-up" id="comments"
+                        class="overflow-y-auto overscroll-auto no-scrollbar max-h-[400px]"></div>
+                </div>
+            </div>
+            <!-- gift atau hadiah  -->
+            <div class="hidden p-8 space-y-3 flex flex-col justify-center items-center">
+                <img src="./preview-saleha-tito/assets/elements/line-love.svg" class="w-[50%] h-full mb-10" alt="">
+                <div class="space-y-4">
+                    <div data-aos="fade-up" data-aos-duration="3000" class="font-nothingyoucoulddo text-4xl font-semibold text-center">
+                        Wedding Gift
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="3000" class="text-lg">
+                        A Note on Gifts
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="3000" class="space-y-2">
+                        <div class="w-full h-[1px] bg-background100"></div>
+                        <div class="w-full h-[1px] bg-background100"></div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="3000" class="text-sm">
+                        Your love, presence and blessings on our wedding day are the most precious gifts we could hope
+                        to receive. And, if you do wish to give us something, would be very much appreciated.
+                    </div>
+                    <div class="space-y-3 text-primary">
+                        <!-- rekening 1  -->
+                        <div class="bg-white p-4 space-y-2 md:p-6 md:px-19 rounded-lg text-left text-colortext"
+                            data-aos="fade-up" data-aos-duration="3000">
+                            <div class="flex justify-between items-between">
+                                <img loading="lazy" src="./preview-saleha-tito/assets/icons/chip-bank.png" class="w-10 mb-3" />
+                                <img loading="lazy" src="./preview-saleha-tito/assets/icons/logo-bni.png" class="h-6" />
+                            </div>
+                            <div class="text-sm text-background300 font-semibold font-sono">
+                                An. Neng Siti Sarah
+                            </div>
+                            <div class="text-sm text-background300 font-sono" id="accountNumber">
+                                1331026356
+                            </div>
+                            <button id="copyAccountButton" onclick="copyToClipboard(this)"
+                                data-original-text="Salin No. Rekening"
+                                class="bg-gray-500 hover:bg-gray-600 text-white p-2 rounded-lg text-xs mt-3 copy-button">
+                                <i class="fi fi-ss-copy-alt"></i>
+                                Salin No. Rekening
+                            </button>
+                        </div>
+                        <!-- rekening 2  -->
+                        <div class="bg-white p-4 space-y-2 md:p-6 md:px-19 rounded-lg text-left text-colortext"
+                            data-aos="fade-up" data-aos-duration="3000">
+                            <div class="flex justify-between items-between">
+                                <img loading="lazy" src="./preview-saleha-tito/assets/icons/chip-bank.png" class="w-10 mb-3" />
+                                <img loading="lazy" src="./preview-saleha-tito/assets/icons/logo-dana.png" class="h-6" />
+                            </div>
+                            <div class="text-sm text-background300 font-semibold font-sono">
+                                An. Neng Siti Sarah
+                            </div>
+                            <div class="text-sm text-background300 font-sono" id="accountNumber">
+                                0895392836776
+                            </div>
+                            <button id="copyAccountButton" onclick="copyToClipboard(this)"
+                                data-original-text="Salin No. Rekening"
+                                class="bg-gray-500 hover:bg-gray-600 text-white p-2 rounded-lg text-xs mt-3 copy-button">
+                                <i class="fi fi-ss-copy-alt"></i>
+                                Salin No. Rekening
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer  -->
+            <div class="p-8 flex flex-col justify-center items-center space-y-5">
+                <img src="./preview-saleha-tito/assets/elements/line-love.svg" class="w-[50%] h-full mb-5" alt="">
+                <div class="space-y-3 w-full">
+                    <div data-aos="fade-up" data-aos-duration="3000" class="font-nothingyoucoulddo text-4xl font-semibold">
+                        Note
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="3000" class="space-y-2">
+                        <div class="w-full h-[2px] bg-background100"></div>
+                        <div class="w-full h-[2px] bg-background100"></div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="3000" class="font-nothingyoucoulddo font-bold tracking-wide text-xl">
+                        To : Saleha & Tito
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="3000" class="p-5 space-y-2 border border-background100 text-semibold font-nothingyoucoulddo">
+                        <div class="text-center">
+                            Thank you for being part of our loves and supporting us through our journey. We were so blessed to have you celeprate and be a part of our wedding day. See you!
+                        </div>
+                        <div class="text-end">Love Saleha & Tito</div>
+                    </div>
+                </div>
+                <svg viewBox="0 0 200 200" class="w-56 h-56 px-0">
+                    <defs>
+                      <!-- Path untuk lingkaran penuh -->
+                      <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
+                    </defs>
+                    <text class="tracking-widest text-xs uppercase" fill="currentColor">
+                      <textPath href="#circlePath" startOffset="0%">
+                        SALEHA & TITO & SALEHA & TITO & SALEHA & TITO & SALEHA & TITO &
+                      </textPath>
+                    </text>
+                  </svg>
+                  <div class="text-sm space-y-1 text-center">
+                    <div>Made with ♥ by <a href="flexation.id">Flexation.Id</a></div>
+                    <div class="space-x-2">
+                        <a href="https://www.instagram.com/flexation.id/" target="_blank">
+                            <i class="fi fi-brands-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/6285732705891" target="_blank">
+                            <i class="fi fi-brands-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div></div>
+
+    <!-- Pop-Up Modal -->
+    <div id="imageModal"
+        class="fixed inset-0 z-50 hidden flex items-center h-screen justify-center bg-black bg-opacity-80">
+        <div class="relative max-w-3xl w-full h-screen p-4">
+            <!-- Close Button -->
+            <span onclick="imgModal.closeModal()"
+                class="absolute top-0 right-0 text-white text-3xl cursor-pointer p-2">&times;</span>
+
+            <!-- Image Slider -->
+            <div class="m-8 flex justify-center items-center min-h-screen max-h-screen">
+                <img loading="lazy" id="modalImage" src="" alt="Image"
+                    class="w-auto h-auto max-h-[calc(100vh-150px)] object-cover rounded-lg" />
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="absolute top-1/2 left-0 transform -translate-y-1/2">
+                <button id="prevBtn" onclick="imgModal.prevImage()" class="text-white text-2xl p-2">
+                    &lt;
+                </button>
+            </div>
+            <div class="absolute top-1/2 right-0 transform -translate-y-1/2">
+                <button id="nextBtn" onclick="imgModal.nextImage()" class="text-white text-2xl p-2">
+                    &gt;
+                </button>
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="./preview-saleha-tito/scripts/animation.js" defer></script>
+        <script src="./preview-saleha-tito/scripts/index.js" defer></script>
+        <script src="./preview-saleha-tito/scripts/api-service.js" async></script>
+</body>
+
+</html>
