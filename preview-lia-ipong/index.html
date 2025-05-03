@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lia & Ipong | @flexation.id</title>
+    <link rel="preload" href="./preview-lia-ipong/styles/index.css" as="style">
+    <link rel="stylesheet" href="./preview-lia-ipong/styles/index.css" />
+    <link rel="icon" href="./preview-lia-ipong/assets/icons/flexation-pink.png" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-straight/css/uicons-bold-straight.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+</head>
+
+<body id='token'
+    class="relative font-playfair text-text50 bg-primary lg:grid lg:grid-cols-3 lg:min-h-screen no-scrollbar no-scrollbar overflow-x-hidden max-w-screen">
+    <div></div>
+
+    <main class="relative lg:shadow-xl">
+        <!-- cover  -->
+        <div id="cover-modal" class="relative bg-primary min-h-screen max-h-screen">
+            <div class="absolute inset-0 flex flex-col justify-between items-center min-h-screen max-h-screen z-0">
+                <img src="./preview-lia-ipong/assets/elements/flower-top.png" alt="">
+                <img src="./preview-lia-ipong/assets/elements/flower-bottom-cover.png" alt="">
+            </div>
+            <div class="relative z-20 min-h-screen text-center py-10 px-8">
+                <div
+                    class="bg-secondary border border-secondary100 border-8 rounded-t-full min-h-[calc(100vh-80px)] max-h-[calc(100vh-80px)] bg-opacity-90">
+                    <div
+                        class="pt-10 flex flex-col items-center justify-between min-h-[calc(100vh-150px)] max-h-[calc(100vh-150px)]">
+                        <div class="space-y-5">
+                            <div class="px-8">
+                                <img src="./preview-lia-ipong/assets/images/cover.png"
+                                    class="bg-secondary border border-secondary100 rounded-t-full"
+                                    alt="">
+                            </div>
+                            <div class="font-medium text-xl">THE WEDDING</div>
+                            <div class="text-4xl">Lia & Ipong</div>
+                            <div class="font-medium">Selasa, 17 Juni 2025</div>
+                        </div>
+                        <div class="p-8 text-center font-semibold space-y-3">
+                            <div class="text-sm">Kepada Yth</div>
+                            <div id="nama-tamu" class="text-lg font-bold">Nama Tamu</div>
+                            <button onclick="closeCover()"
+                                class="text-xs border border-text50 bg-background50 p-2 px-5 rounded-xl hover:bg-background200 hover:text-black">
+                                <div class="flex items-center justify-center space-x-2">
+                                    <i class="fi fi-rr-envelope"></i>
+                                    <span>Buka Undangan</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- konten utama  -->
+        <div id="main-content" class="hidden relative z-10 no-scrollbar">
+            <!-- header  -->
+            <div class="relative px-5 pt-16 relative bg-secondary">
+                <div class="absolute z-10 inset-0 flex flex-col justify-between items-center z-0">
+                    <img src="./preview-lia-ipong/assets/elements/flower-top.png" class="h-96 w-full object-cover object-top" alt="">
+                </div>
+                <div class="relative z-20">
+                    <div
+                        class="bg-primary text-text100 rounded-t-full p-6 space-y-5 flex flex-col items-center justify-between">
+                        <img data-aos="fade-up" data-aos-duration="3000" src="./preview-lia-ipong/assets/images/cover.png"
+                            class="object-cover h-96 w-full object-top rounded-t-full bg-secondary" alt="" />
+                        <div data-aos="fade-up" data-aos-duration="3000" class="text-center space-y-3 mb-5">
+                            <div class="font-semibold text-xl uppercase">The Wedding Of</div>
+                            <div class="font-pinyon text-5xl">Lia & Ipong</div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="3000" class="space-y-4 ">
+                            <div class="flex justify-center gap-2 text-sm">
+                                <div class="flex flex-col items-center border border-textprimary rounded-lg p-2">
+                                    <h1 id="days" class="text-lg"></h1>
+                                    <p>Hari</p>
+                                </div>
+                                <div class="flex flex-col items-center border  border-textprimary rounded-lg p-2">
+                                    <h1 id="hours" class="text-lg"></h1>
+                                    <p>Jam</p>
+                                </div>
+                                <div class="flex flex-col items-center border  border-textprimary rounded-lg p-2">
+                                    <h1 id="minutes" class="text-lg"></h1>
+                                    <p>Menit</p>
+                                </div>
+                                <div class="flex flex-col items-center border  border-textprimary rounded-lg p-2">
+                                    <h1 id="seconds" class="text-lg"></h1>
+                                    <p>Detik</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="3000" class="text-sm text-center font-medium">
+                            Selasa, 17 Juni 2025
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-duration="3000" class="flex justify-center">
+                            <button id="save-to-calender"
+                                class="font-medium text-xs flex items-center justify-center gap-2 border-textprimary border text-textprimary py-1 px-3 rounded">
+                                <div class="">
+                                    <i class="fi fi-rs-calendar"></i>
+                                    <span>Save to Calender</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-0 z-0 grid">
+                    <div class="bg-gradient-to-t from-primary to-transparent bg-opacity-100"></div>
+                </div>
+            </div>
+            <!-- surah  -->
+            <div class="relative p-8 py-20 pb-40">
+                <div class="absolute z-10 inset-0 flex flex-col justify-end items-center z-0">
+                    <img src="./preview-lia-ipong/assets/elements/top-flower.png" alt="">
+                </div>
+                <div
+                    class="relative z-20 space-y-3 text-text100 text-center font-semibold text-sm flex flex-col items-center justify-center">
+                    <hr  data-aos="fade-up" class="w-[30%] pb-5">
+                    <div data-aos="fade-up" class="text-xl font-semibold">#PongInLuvWithLia</div>
+                    <div data-aos="fade-up" data-aos-duration="3000" class="text-sm">
+                        Allah Subhanahu Wa Ta'ala berfirman
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="3000" class="italic text-xs">
+                        Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
+                        untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung
+                        dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa
+                        kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar
+                        terdapat tanda-tanda bagi kaum yang berfikir.
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="3000" class="italic">QS. Ar-Rum 21</div>
+                </div>
+            </div>
+            <!-- pengantin  -->
+            <div class="relative bg-secondary p-8 py-20 pt-40">
+                <div class="absolute z-10 inset-0 flex flex-col justify-between items-center z-0">
+                    <img src="./preview-lia-ipong/assets/elements/bottom-flower.png" alt="">
+                    <img src="./preview-lia-ipong/assets/elements/flower.png" alt="">
+                </div>
+                <div class="relative z-20 text-center pb-28">
+                    <div class="space-y-3">
+                        <div data-aos="fade-up" data-aos-duration="3000" class="text-xl">بِسْمِ اللّٰهِ الرَّحْمٰنِ
+                            الرَّحِيْمِ </div>
+                        <div data-aos="fade-up" data-aos-duration="3000" class="text-sm font-semibold">
+                            Assalamualaikum Warahmatullahi Wabarakatuh
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="3000" class="text-sm">
+                            Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta’ala, insyaaAllah
+                            kami akan menyelenggarakan acara pernikahan :
+                        </div>
+                    </div>
+                    <!-- pengantin  -->
+                    <div class="space-y-5">
+                        <div class="flex flex-col items-center justify-center space-y-2 mt-10">
+                            <div data-aos="fade-up" class="relative pb-8">
+                                <div class="absolute inset-0 z-10 flex  justify-end items-end">
+                                    <img src="./preview-lia-ipong/assets/elements/flower-catin.png" alt="">
+                                </div>
+                                <img src="./preview-lia-ipong/assets/images/mempelai-wanita.png"
+                                    class="bg-secondary100 object-cover border w-44 border-primary border-4 rounded-t-full"
+                                    alt="">
+                            </div>
+                            <div data-aos="fade-up" data-aos-duration="3000" class="text-3xl font-bold">
+                                Karliyani
+                            </div>
+                            <div data-aos="fade-up" data-aos-duration="3000" class="font-semibold">
+                                Putra dari <br> 
+                                Bapak Indra Patia dan Ibu Asmidar
+                                <div data-aos="fade-up" data-aos-duration="3000" class="font-semibold text-xs">
+                                    Dusun Keramat, Desa Tanjung Seumantoh, <br> Kecamatan Karang Baru, Aceh Tamiang
+                                </div>
+                            </div>
+                        </div>
+                        <div class="font-bold text-5xl">&</div>
+                        <!-- catin 2  -->
+                        <div class="flex flex-col items-center justify-center space-y-2">
+                            <div data-aos="fade-up" class="relative pb-8">
+                                <div class="absolute inset-0 z-10 flex  justify-end items-end">
+                                    <img src="./preview-lia-ipong/assets/elements/flower-catin.png" alt="">
+                                </div>
+                                <img src="./preview-lia-ipong/assets/images/mempelai-pria.png"
+                                    class="bg-secondary100 object-cover border w-44 border-primary border-4 rounded-t-full"
+                                    alt="">
+                            </div>
+                            <div data-aos="fade-up" data-aos-duration="3000" class="text-3xl font-bold">
+                                Irvan Syahputra
+                            </div>
+                            <div data-aos="fade-up" data-aos-duration="3000" class="font-semibold">
+                                Putra dari <br> 
+                                Bapak Syamsuddin dan Rita Andriani
+                                <div data-aos="fade-up" data-aos-duration="3000" class="font-semibold text-xs">
+                                    Dusun Pembangunan, Desa Tualang Baro, <br> Kecamatan Manyak Payed, Kabupaten Aceh Tamiang
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- acara  -->
+            <div class="relative min-h-screen bg-secondary">
+                <div class="absolute z-10 inset-0 flex flex-col justify-between items-center z-0">
+                    <img src="./preview-lia-ipong/assets/elements/flower-top.png" alt="">
+                    <img src="./preview-lia-ipong/assets/elements/flower.png" alt="">
+                </div>
+                <div class="relative z-20 pt-0 p-6 text-text100 text-center">
+                    <div class="p-5 bg-primary space-y-6 rounded-t-full">
+                        <img src="./preview-lia-ipong/assets/images/cover.png" class="rounded-t-full bg-secondary100 h-80 w-full object-cover object-top" alt="">
+                        <!-- acara 1  -->
+                        <div data-aos="fade-up" data-aos-duration="3000"
+                            class="rounded-lg bg-secondary bg-opacity-30 p-5 space-y-1">
+                            <div class="font-pinyon text-3xl">
+                                Akad Nikah
+                            </div>
+                            <div>
+                                <div class="font-cormorant uppercase text-xl font-semibold">
+                                    Selasa
+                                </div>
+                                <div class="font-cormorant uppercase text-3xl font-semibold">
+                                    17 Juni 2025
+                                </div>
+                                <div class="">
+                                    09.00 WIB
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fi fi-bs-marker text-xl"></i>
+                                <div class="font-cormorant font-semibold uppercase">
+                                    Kediaman <br />
+                                    Mempelai Wanita</span>
+                                </div>
+                                <div class="text-xs space-y-1">
+                                    <div>
+                                        Jl. Medan Banda Aceh, Medang Ara, Kec. Karang Baru, Kabupaten Aceh Tamiang, Aceh
+                                        24476
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- acara 2  -->
+                        <div data-aos="fade-up" data-aos-duration="3000"
+                            class="rounded-lg bg-secondary bg-opacity-30 p-5 space-y-1">
+                            <div class="font-pinyon text-3xl">
+                                Resepsi
+                            </div>
+                            <div>
+                                <div class="font-cormorant uppercase text-xl font-semibold">
+                                    Selasa
+                                </div>
+                                <div class="font-cormorant uppercase text-3xl font-semibold">
+                                    17 Juni 2025
+                                </div>
+                                <div class="">
+                                    11.00 WIB - Selesai
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fi fi-bs-marker text-xl"></i>
+                                <div class="font-cormorant font-semibold uppercase">
+                                    Kediaman <br />
+                                    Mempelai Wanita</span>
+                                </div>
+                                <div class="text-xs space-y-1">
+                                    <div>
+                                        Dusun Keramat, Desa Tanjung Seumantoh, <br> Kecamatan Karang Baru, Aceh Tamiang
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- cerita cinta  -->
+            <div class="relative p-10">
+                <div class="absolute inset-0 z-10 flex flex-row justify-between py-10">
+                    <img src="./preview-lia-ipong/assets/elements/flower-side.png" class="h-36 w-fit -rotate-180" alt="">
+                    <img src="./preview-lia-ipong/assets/elements/flower-side.png" class="h-36 w-fit mt-36" alt="">
+                </div>
+                <div class="relative z-20 space-y-3 text-text100 rounded-xl p-5 pt-8 pb-12 md:px-8">
+                    <!-- <hr> -->
+                    <div class="font-bold text-2xl text-center">Perjalanan Cinta Kita</div>
+                    <hr class="w-[30%] mx-auto" />
+                    <div class="text-xs text-center">
+                        Awal perkenalan kami pada tahun 2021, kami berkenalan di tempat kerja yang sama. Entah mengapa
+                        hubungan ini berjalan serius hingga pada tanggal 09 september 2023 kami memutuskan untuk ke
+                        hubungan yang lebih serius untuk bertunangan dan saling berjanji menjaga hubungan ini hingga
+                        pernikahan tiba. Dan pada bulan Juni 2025 kami memutuskan untuk siap melajutkan hubungan ini
+                        menjadi sepasang suami istri.
+                    </div>
+                </div>
+            </div>
+            <!-- hadiah  -->
+            <div class="bg-secondary">
+                <div class="bg-background400 p-5 md:px-8 py-12 space-y-8">
+                    <div class="space-y-3">
+                        <div data-aos="zoom-in" class="font-tangerine font-bold text-5xl">Wedding Gift</div>
+                        <div data-aos="fade-up" class="text-xs">
+                            Doa Restu Anda merupakan karunia yang sangat berarti bagi kami. Dan jika memberi sebagai
+                            ungkapan tanda kasih, Anda dapat memberi kado secara cashless.
+                        </div>
+                    </div>
+                    <div class="space-y-3 text-primary">
+                        <!-- rekening 1  -->
+                        <div class="bg-white p-4 space-y-2 md:p-6 md:px-19 rounded-lg text-left text-colortext"
+                            data-aos="fade-up" data-aos-duration="3000">
+                            <div class="flex justify-between items-between">
+                                <img loading="lazy" src="./preview-lia-ipong/assets/icons/chip-bank.png" class="w-16 mb-3" />
+                                <img loading="lazy" src="./preview-lia-ipong/assets/icons/logo-bankaceh.png" class="h-8" />
+                            </div>
+                            <div class="text-sm text-background300 font-semibold font-sono">
+                                An. Karyani
+                            </div>
+                            <div class="text-sm text-background300 font-sono" id="accountNumber">
+                                50702200068962
+                            </div>
+                            <button id="copyAccountButton" onclick="copyToClipboard(this)"
+                                data-original-text="Salin No. Rekening"
+                                class="bg-gray-500 hover:bg-gray-600 text-white p-2 rounded-lg text-xs mt-3 copy-button">
+                                <i class="fi fi-ss-copy-alt"></i>
+                                Salin No. Rekening
+                            </button>
+                        </div>
+                        <!-- rekening 2  -->
+                        <div class="bg-white p-4 space-y-2 md:p-6 md:px-19 rounded-lg text-left text-colortext"
+                            data-aos="fade-up" data-aos-duration="3000">
+                            <div class="flex justify-between items-between">
+                                <img loading="lazy" src="./preview-lia-ipong/assets/icons/chip-bank.png" class="w-16 mb-3" />
+                                <img loading="lazy" src="./preview-lia-ipong/assets/icons/logo-bsi-1.png" class="h-8" />
+                            </div>
+                            <div class="text-sm text-background300 font-semibold font-sono">
+                                An. Karyani
+                            </div>
+                            <div class="text-sm text-background300 font-sono" id="accountNumber">
+                                7209960626
+                            </div>
+                            <button id="copyAccountButton" onclick="copyToClipboard(this)"
+                                data-original-text="Salin No. Rekening"
+                                class="bg-gray-500 hover:bg-gray-600 text-white p-2 rounded-lg text-xs mt-3 copy-button">
+                                <i class="fi fi-ss-copy-alt"></i>
+                                Salin No. Rekening
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ucapan dan doa  -->
+            <div class="relative py-10 p-5">
+                <div class="absolute z-10 inset-0 flex flex-col justify-between items-center z-0">
+                    <img src="./preview-lia-ipong/assets/elements/flower-top.png" alt="">
+                    <!-- <img src="./preview-lia-ipong/assets/elements/flower.png" alt=""> -->
+                </div>
+                <div class="relative z-20 border border-secondary100 border-4 bg-opacity-90 bg-secondary rounded-2xl">
+                    <div class="p-5 md:px-8 py-10 space-y-5">
+                        <div class="space-y-3">
+                            <div data-aos="zoom-in" class="font-tangerine font-bold text-3xl">Ucapan dan Do'a</div>
+                            <div data-aos="fade-up" class="text-sm">
+                                Berikan ucapan terbaik untuk kedua mempelai.
+                            </div>
+                        </div>
+                        <div data-aos="fade-up">
+                            <hr class="border-3 border-primary" />
+                        </div>
+                        <div class="grid grid-cols-1 gap-5 reveal fade-bottom rounded-xl text-start">
+                            <form data-aos="fade-up" id="postComment" class="grid grid-cols-1 gap-4">
+                                <div>
+                                    <label for="author" class="block mb-2 text-sm font-medium">Nama</label>
+                                    <input type="text" id="author" name="author"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                        placeholder="Masukkan Nama Anda" required />
+                                </div>
+                                <div>
+                                    <label for="hadir" class="block mb-2 text-sm font-medium">Kehadiran</label>
+                                    <select id="hadir" name="kehadiran"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                        placeholder="Pilih Kehadiran" required>
+                                        <option value="">--Pilih Kehadiran--</option>
+                                        <option value="hadir">Hadir</option>
+                                        <option value="tidak_hadir">Tidak Hadir</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="content" class="block mb-2 text-sm font-medium">Ucapan & Doa</label>
+                                    <textarea id="content" name="content" rows="4"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                        placeholder="Tulis ucapan dan doa Anda untuk mempelai" required></textarea>
+                                </div>
+                                <div class="justify-self-end">
+                                    <button type="submit"
+                                        class="bg-white text-background500 hover:bg-background300 hover:text-white py-2 px-6 text-sm rounded-lg">
+                                        Kirim
+                                    </button>
+                                </div>
+                            </form>
+                            <div data-aos="fade-up">
+                                <hr class="border-3 border-primary" />
+                            </div>
+                            <!-- Komentar -->
+                            <div data-aos="fade-up" id="comments"
+                                class="overflow-y-auto overscroll-auto no-scrollbar max-h-[400px]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer  -->
+             <div data-aos="fade-up" class="relative pb-52 py-10">
+                <div class="absolute inset-0 flex flex-col justify-end items-center z-0">
+                    <!-- <img src="./preview-lia-ipong/assets/elements/flower-top.png" alt=""> -->
+                    <img src="./preview-lia-ipong/assets/elements/flower-bottom-cover.png" alt="">
+                </div>
+                 <div class="relative z-20 text-text100 p-5 text-center space-y-10">
+                     <div class="text-sm">
+                         Atas kehadiran dan doa restu dari <br> Bapak/Ibu/Saudara/i
+                         sekalian, kami mengucapkan <br> Terima Kasih.
+                     </div>
+                     <div class="space-y-3">
+                         <div class="font-semibold">
+                             Kami yang berbahagia
+                         </div>
+                         <div class="font-bold text-4xl">Lia & Ipong</div>
+                     </div>
+                 </div>
+             </div>
+
+        </div>
+    </main>
+
+    <div></div>
+
+    <!-- Pop-Up Modal -->
+    <div id="imageModal"
+        class="fixed inset-0 z-50 hidden flex items-center h-screen justify-center bg-black bg-opacity-80">
+        <div class="relative max-w-3xl w-full h-screen p-4">
+            <!-- Close Button -->
+            <span onclick="imgModal.closeModal()"
+                class="absolute top-0 right-0 text-white text-3xl cursor-pointer p-2">&times;</span>
+
+            <!-- Image Slider -->
+            <div class="m-8 flex justify-center items-center min-h-screen max-h-screen">
+                <img loading="lazy" id="modalImage" src="" alt="Image"
+                    class="w-auto h-auto max-h-[calc(100vh-150px)] object-cover rounded-lg" />
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="absolute top-1/2 left-0 transform -translate-y-1/2">
+                <button id="prevBtn" onclick="imgModal.prevImage()" class="text-white text-2xl p-2">
+                    &lt;
+                </button>
+            </div>
+            <div class="absolute top-1/2 right-0 transform -translate-y-1/2">
+                <button id="nextBtn" onclick="imgModal.nextImage()" class="text-white text-2xl p-2">
+                    &gt;
+                </button>
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="./preview-lia-ipong/scripts/animation.js" defer></script>
+        <script src="./preview-lia-ipong/scripts/index.js" defer></script>
+        <script src="./preview-lia-ipong/scripts/api-service.js" async></script>
+</body>
+
+</html>
